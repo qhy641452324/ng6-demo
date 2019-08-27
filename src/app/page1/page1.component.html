@@ -1,0 +1,13 @@
+
+<div class="title-wrap">
+    我的列表
+</div>
+
+<div class="list-wrap">
+    <div class="child" *ngFor="let v of listinfo">
+        <a [routerLink]="['/detail']" [queryParams] ="{id:v.album.albumID }">
+            <img src="{{v.album.cover.urls[0].url}}" alt="">
+            <span class="title">{{v.album.name}}</span>
+        </a>
+    </div>
+</div>
